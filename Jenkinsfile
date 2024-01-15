@@ -23,5 +23,11 @@ pipeline {
                     sh './jenkins/scripts/kill.sh'
                 }
             }
+            stage ('Sleep') {
+                steps {
+                    sh 'sleep 300'
+                    input message 'aku kembali setelah 1 menit'
+                }
+            }
         }
     }
