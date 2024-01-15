@@ -31,6 +31,12 @@ pipeline {
                     }
                 }
             }
+            stage ('aku akan kembali dalam 60 detik') {
+                steps {
+                    echo 'aku akan kembali dalam 60 detik'
+                    sleep (time:60, unit: "SECONDS")
+                }
+            }
             stage ('After Sleep') {
                 steps {
                     echo 'Aku sudah kembali'
