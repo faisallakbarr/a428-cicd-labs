@@ -25,8 +25,8 @@ pipeline {
             }
             stage ('Sleep') {
                 steps {
-                    sh 'sleep 300'
-                    echo 'aku kembali setelah 1 menit'
+                    sh 'sleep 60'
+                    echo 'aku sudah kembali setelah 1 menit'
                 }
             }
         }
