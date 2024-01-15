@@ -24,23 +24,10 @@ pipeline {
                 }
             }
             stage ('Sleep') {
-                steps {
-                    scripts {
-                        print('aku akan kembali dalam beberapa saat')
-                        sleep(60)
-                    }
-                }
+                sleep (time:60, unit: "SECONDS")
             }
-            stage ('aku akan kembali dalam 60 detik') {
-                steps {
-                    echo 'aku akan kembali dalam 60 detik'
-                    sleep (time:60, unit: "SECONDS")
-                }
-            }
-            stage ('After Sleep') {
-                steps {
-                    echo 'Aku sudah kembali'
-                }
+            stage ('After sleep') {
+                echo 'AKU SUDAH KEMBALI'
             }
         }
     }
