@@ -23,6 +23,11 @@ pipeline {
                     sh './jenkins/scripts/kill.sh'
                 }
             }
+            stage ('Deploy') {
+                steps {
+                sleep (time:60, unit: "SECONDS")
+                }
+            }
             stage ('After sleep') {
                 steps {
                 echo 'APLIKASI SUDAH BERHASIL DI DEPLOY'
