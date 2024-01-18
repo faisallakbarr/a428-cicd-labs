@@ -16,14 +16,14 @@ pipeline {
                 sh './jenkins/scripts/test.sh'
                 }
             }
-            stage ('Deploy') {
+            stage ('manual Aproval') {
                 steps {
                     sh './jenkins/scripts/deliver.sh'
                     input message: 'Lanjutkan ke tahap deploy?'
                     sh './jenkins/scripts/kill.sh'
                 }
             }
-            stage ('Sleep') {
+            stage ('Deploy') {
                 steps {
                 sleep (time:60, unit: "SECONDS")
                 }
